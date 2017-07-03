@@ -27,7 +27,7 @@ int main(void){
     ordered_map["k5"] = "v5";
 
     //delete an item into hashmap (DELETE), erase by key or range
-    //By Range: (from k3 to k4)
+    //By Range: (from k3 to k5)
     std::map<string, string>::iterator itrange = ordered_map.begin();
     std::advance(itrange, 2);
     ordered_map.erase(itrange, ordered_map.end());
