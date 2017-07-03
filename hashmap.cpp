@@ -24,6 +24,7 @@ int main(void){
     ordered_map.insert(std::pair<string, string>("k2", "v2"));
     ordered_map.insert(std::pair<string, string>("k3", "v3"));
     ordered_map.insert(std::pair<string, string>("k4", "v4"));
+    ordered_map["k5"] = "v5";
 
     //delete an item into hashmap (DELETE), erase by key or range
     //By Range: (from k3 to k4)
