@@ -30,17 +30,16 @@ int main(void){
     
     //create hashmap for array 'arr', O(n)
     int id;
-    //struct arrHashmap hashtable[100] = {0}; //size should be largestNum
-    struct arrHashmap *p = NULL;
-    struct arrHashmap hashtable[100];//size should be largestNum
-    p = hashtable;
+    struct arrHashmap hashtable[100] = {0}; //size should be largestNum
 
-    // pointer hack if not support VLA, variable length array 
+    //NOTE: pointer hack if not support VLA, variable length array 
+    /*
     int pidx;
     for (pidx = 0; pidx < largestNum; pidx++){
         (p + pidx)->key = 0;
         (p + pidx)->value = 0;
     }
+    */
 
     //Create hashtable for keys and values
     for (id = 0; id < arraylength; id++){
