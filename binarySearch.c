@@ -31,7 +31,8 @@ int main(void){
 #define MAX 10
     int array[MAX] = {1,2,3,4,5,6,7,8,9,10};
     int result = -1;
-    result =  binarySearch(array, 0, MAX - 1, 7);
+    int max_arr_idx = MAX - 1;
+    result =  binarySearch(array, 0, max_arr_idx, 7);
     printf("result: %d\n", result);
     return 0;
 }
