@@ -4,20 +4,24 @@
 using namespace std;
 
 int re_parse(char* str, char* pattern){
+    // i: offset of str
+    // j: offset of pattern
+    // nextchar: saving next character for '*' matching function
+    // nextpatternchar: saving next character of the pattern for '*' matching function
+    // continues if the value of iterator is '?', and shift right to get the next char and pattern to matching rest words
+    // checking the end if the position of i equals the strlen(str) - 1
     int i;
     int j;
     int match = -1;
-    int cnt = 0;
 
     char *nextchar = NULL;
     char *nextpatternchar = NULL;
 
-    /* engine for question mark */
     for (i = 0, j = 0; i < strlen(str); i++, j++) {
         cout << "i:" << i << " j:" << j <<endl; 
-        if (*(pattern + j) == '?'){
+        if (*(pattern + j) == '?'){ /* engine for question mark */
             continue;
-        } else if  (*(pattern + j) == '*') {
+        } else if  (*(pattern + j) == '*') { /* engine for question mark */
             j++;
             nextpatternchar = pattern + j;
             while (1){
