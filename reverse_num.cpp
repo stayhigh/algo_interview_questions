@@ -13,10 +13,9 @@ int get_num_length(int x){
     return length;
 }
 
-/* end: flag for check x value if exhaustive 
- * x: apply parameter pointer as iterator
+/* input x: apply parameter pointer to exhaust digits
+ * end: flag for check x value if exhaustive, static keyword for state storage
  * last digit: get the last digit for return value
- * 
  */
 int getlastdigit(int *x){
     int lastdigit;
@@ -40,7 +39,13 @@ int getlastdigit(int *x){
 
 int reverse_num(int x){
     // expect the output are 54321 and -98765, respectively.
-    int last_digit;
+    /*
+     * r:  return from getlastdigit
+     * positive: flag for checking num if positivity
+     * out: value for result of reverse_num
+     * numList: make a list for saving the reversed numbers as elements
+     * it: create an iterator to retrieve all elements
+     */
     int r;
     int level = 1;
     int out = 0;
