@@ -1,6 +1,8 @@
 #include <iostream>
 #include <list>
 
+// c++ -std=c++11 reverse_num.cpp -o reverse_num && ./reverse_num
+
 using namespace std;
 
 int get_num_length(int x){
