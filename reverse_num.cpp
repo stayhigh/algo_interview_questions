@@ -13,8 +13,12 @@ int get_num_length(int x){
     return length;
 }
 
+/* end: flag for check x value if exhaustive 
+ * x: apply parameter pointer as iterator
+ * last digit: get the last digit for return value
+ * 
+ */
 int getlastdigit(int *x){
-    int ret;
     int lastdigit;
     static int end = 0;
 
