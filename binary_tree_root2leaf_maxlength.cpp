@@ -13,13 +13,13 @@ struct Node{
 
 int max_length_path(struct Node* root){
     int root2leaf_path = 0;
-    if (root == NULL){
+    if (root == NULL){  //degenerate case
         return 0;
-    } else if ((root->left != NULL && root->left->left == NULL && root->left->right == NULL) || (root->right != NULL && root->right->left == NULL && root->right->right == NULL)){
+    } else if ((root->left != NULL && root->left->left == NULL && root->left->right == NULL) || (root->right != NULL && root->right->left == NULL && root->right->right == NULL)){ // base case
         root2leaf_path = 1;
-    } else if (root->left != NULL || root->right != NULL){
+    } else if (root->left != NULL || root->right != NULL){ // get the max length path from left and right subtrees
         root2leaf_path += (1 + MAX(max_length_path(root->left), max_length_path(root->right)));
-    } else if (root != NULL && root->left == NULL && root->right == NULL){ // leaf node
+    } else if (root != NULL && root->left == NULL && root->right == NULL){ // leaf nodes have length 0
         return 0;
     }
 
